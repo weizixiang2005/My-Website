@@ -160,7 +160,7 @@ var _hmt = _hmt || [];
 		<script>
 			function show_date_time() {
 			    window.setTimeout("show_date_time()", 1000);
-			    BirthDay = new Date("02/11/2021 12:00:00");
+			    BirthDay = new Date("02/11/2021 05:46:00");
 			    today = new Date();
 			    timeold = (today.getTime() - BirthDay.getTime());
 			    sectimeold = timeold / 1000;
@@ -173,10 +173,11 @@ var _hmt = _hmt || [];
 			    e_minsold = (e_hrsold - hrsold) * 60;
 			    minsold = Math.floor((e_hrsold - hrsold) * 60);
 			    seconds = Math.floor((e_minsold - minsold) * 60);
-			    span_dt_dt.innerHTML = "此破站已苟活:" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+			    span_dt_dt.innerHTML = "此破站已苟活:" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒"+"(UTC)";
 			}
 			show_date_time();
 		</script>
+	    
 <!--
 	    
 	    <p id="time"></p>
