@@ -4,21 +4,21 @@
      <title>
       Wei Zixiang's Website.
     </title>
-	  <script type="text/javascript">
- var title;  // 用于临时存放原来的title内容
-    window.onblur = function(){
+    <script type="text/javascript">
+      var title;  // 用于临时存放原来的title内容
+      window.onblur = function(){
       // onblur时先存下原来的title,再更改title内容
       title = document.title;
       document.title = " （╯‵□′）╯ 快回来";
-    };
-    window.onfocus = function () {
+      };
+      window.onfocus = function () {
       // onfocus时原来的title不为空才替换回去
       // 防止页面还没加载完成且onblur时title=undefined的情况
       if(title) { 
         document.title = title;
+        }
       }
-    }
-	  </script>
+    </script>
 	  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,16 +29,15 @@
     </script>
     <!-- Bootstrap4核心CSS文件 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-   
-   
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js">
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js">
     </script>
     <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
-    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js">
+    <!--<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js">-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js>
     </script>
     <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js">
     </script>
     <style>
       .fakeimg { height: 200px; background: #aaa; }
