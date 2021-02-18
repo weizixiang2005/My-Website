@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-     <title>
+    <title>
       Wei Zixiang's Website.
     </title>
     <script type="text/javascript">
@@ -19,7 +19,6 @@
         }
       }
     </script>
-	  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--自动切换https-->
@@ -27,6 +26,7 @@
       var targetProtocol = "https:";
       if (window.location.protocol != targetProtocol) window.location.href = targetProtocol + window.location.href.substring(window.location.protocol.length);
     </script>
+    <!--结束-->
     <!-- Bootstrap4核心CSS文件 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
@@ -34,27 +34,25 @@
     </script>
     <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js">
- 
     </script>
     <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js">
     </script>
     <style>
       .fakeimg { height: 200px; background: #aaa; }
-    </style>
-	  
-	  <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?b3097cb9287ec4ab7e7401e1412054ba";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
+    </style>  
+    <!-- 百度统计 -->
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b3097cb9287ec4ab7e7401e1412054ba";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <!--END-->
   </head>
-  
   <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
       <a class="navbar-brand" href="#">
@@ -79,23 +77,20 @@ var _hmt = _hmt || [];
           <li class="nav-item">
             <a class="nav-link" href="https://www.weizixiang.com/help/">
               帮助
-            
             </a>
           </li>
         </ul>
       </div>
     </nav>
-
-   <div class="dropdown">
-<button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" style="background-color:white; color:black; float:center;" >
+    <div class="dropdown">
+    <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" style="background-color:white; color:black; float:center;" >
       Language
     </button>
    <div class="dropdown-menu">
       <a class="dropdown-item" href="https://www.weizixiang.com">简体中文</a>
       <a class="dropdown-item" href="https://www.weizixiang.com/en">English</a>
       <a class="dropdown-item" href="https://www.weizixiang.com/ru">Pусский язык</a>
-</div>
-
+  </div>
     <div class="container" style="margin-top:30px">
       <div class="row">
         <div class="col-sm-4">
@@ -112,7 +107,6 @@ var _hmt = _hmt || [];
             <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">友链</a>
 	    <a class="dropdown-item" href="https://www.weizixiang.com">子翔的网站</a>
           </div>
-
           <hr class="d-sm-none">
         </div>
         <div class="col-sm-8">
@@ -152,64 +146,32 @@ var _hmt = _hmt || [];
       <p>
         E-mail:weizixiang05@foxmail.com
       </p>
-<h6>感觉这个网站有点丑唉</h6>
-
-
-<span id="span_dt_dt"></span>
+    <h6>感觉这个网站有点丑唉</h6>
+    <!--计时器-->
+    <span id="span_dt_dt"></span>
 		<script>
 			function show_date_time() {
-			    window.setTimeout("show_date_time()", 1000);
-			    BirthDay = new Date("02/11/2021 05:46:00");
-			    today = new Date();
-			    timeold = (today.getTime() - BirthDay.getTime());
-			    sectimeold = timeold / 1000;
-			    secondsold = Math.floor(sectimeold);
-			    msPerDay = 24 * 60 * 60 * 1000;
-			    e_daysold = timeold / msPerDay;
-			    daysold = Math.floor(e_daysold);
-			    e_hrsold = (e_daysold - daysold) * 24;
-			    hrsold = Math.floor(e_hrsold);
-			    e_minsold = (e_hrsold - hrsold) * 60;
-			    minsold = Math.floor((e_hrsold - hrsold) * 60);
-			    seconds = Math.floor((e_minsold - minsold) * 60);
-			    span_dt_dt.innerHTML = "此破站已苟活:" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒"+"(UTC)";
+			window.setTimeout("show_date_time()", 1000);
+			BirthDay = new Date("02/11/2021 05:46:00");
+			today = new Date();
+			timeold = (today.getTime() - BirthDay.getTime());
+			sectimeold = timeold / 1000;
+			secondsold = Math.floor(sectimeold);
+			msPerDay = 24 * 60 * 60 * 1000;
+			e_daysold = timeold / msPerDay;
+			daysold = Math.floor(e_daysold);
+			e_hrsold = (e_daysold - daysold) * 24;
+			hrsold = Math.floor(e_hrsold);
+			e_minsold = (e_hrsold - hrsold) * 60;
+			minsold = Math.floor((e_hrsold - hrsold) * 60);
+			seconds = Math.floor((e_minsold - minsold) * 60);
+			span_dt_dt.innerHTML = "此破站已苟活:" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒"+"(UTC)";
 			}
 			show_date_time();
 		</script>
 	    <p>Copyright © 2021 Wei Zixiang‘s Website</p>
-<!--
-	    
-	    <p id="time"></p>
-<script>
-ajax()
-  function ajax(option){
-    var xhr = null;
-    if(window.XMLHttpRequest){
-      xhr = new window.XMLHttpRequest();
-    }else{ // ie
-      xhr = new ActiveObject("Microsoft")
-    }
-    // 通过get的方式请求当前文件
-    xhr.open("get","/");
-    xhr.send(null);
-    // 监听请求状态变化
-    xhr.onreadystatechange = function(){
-      var time = null,
-          curDate = null;
-      if(xhr.readyState===2){
-        // 获取响应头里的时间戳
-        time = xhr.getResponseHeader("Date");
-        console.log(xhr.getAllResponseHeaders())
-        curDate = new Date(time);
-        document.getElementById("time").innerHTML = "时间"+curDate.getFullYear()+"-"+(curDate.getMonth()+1)+"-"+curDate.getDate()+" "+curDate.getHours()+":"+curDate.getMinutes()+":"+curDate.getSeconds();
-      }
-    }
-  }
-</script>
-	   
--->
-	    
-	    <!--很好的API:https://api.github.com/repos/username/hub-->
+      <!--很好的API:https://api.github.com/repos/username/hub-->
+      <!--歪比巴卜 歪比歪比-->
     </div>
   </body>
 </html>
