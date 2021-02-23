@@ -1,18 +1,140 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script><!--hexin-->
-  </head>
-  <body>
-    <div class="container"><!--加“-fluid”为全屏-->
-      <p>
-        <center>想要交换友链，请联系我：weizixiang05@foxmail.com</center>
-      </p> 
+<head>
+<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Wei Zixiang's Blog</title>
+	<!--自动切换https（感觉没啥用）-->
+    <script type="text/javascript">
+      var targetProtocol = "https:";
+      if (window.location.protocol != targetProtocol) window.location.href = targetProtocol + window.location.href.substring(window.location.protocol.length);
+    </script>
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    /* Custom Styles */
+    ul.nav-tabs{
+        width: 140px;
+        margin-top: 20px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    }
+    ul.nav-tabs li{
+        margin: 0;
+        border-top: 1px solid #ddd;
+    }
+    ul.nav-tabs li:first-child{
+        border-top: none;
+    }
+    ul.nav-tabs li a{
+        margin: 0;
+        padding: 8px 16px;
+        border-radius: 0;
+    }
+    ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+        color: #fff;
+        background: #0088cc;
+        border: 1px solid #0088cc;
+    }
+    ul.nav-tabs li:first-child a{
+        border-radius: 4px 4px 0 0;
+    }
+    ul.nav-tabs li:last-child a{
+        border-radius: 0 0 4px 4px;
+    }
+    ul.nav-tabs.affix{
+        top: 30px; /* Set the top position of pinned element */
+    }
+</style>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?26e17de7a29572bf41f06c2bab51c776";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+	
+	<!--点鼠标左键有文字，百度上搞来的-->
+	<script type="text/javascript">
+//定义获取词语下标
+var a_idx = 0;
+jQuery(document).ready(function($) {
+    //点击body时触发事件
+    $("body").click(function(e) {
+    //需要显示的词语
+    var a = new Array("富强","民主", "文明", "和谐","自由", "平等", "公正","法治", "爱国", "敬业","诚信", "友善");
+    //设置词语给span标签
+    var $i = $("<span/>").text(a[a_idx]);
+    //下标等于原来下标+1  余 词语总数
+    a_idx = (a_idx + 1)% a.length;
+    //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+    //获取x和y的指针坐标
+    var x = e.pageX, y = e.pageY;
+    //在鼠标的指针的位置给$i定义的span标签添加css样式
+    $i.css({"z-index" : 999999999999999999999999999999999999999999999999999999999999999999999,
+        "top" : y - 20,
+        "left" : x,
+        "position" : "absolute",
+        "font-weight" : "bold",
+        "color" : "#ff6651"
+        });
+    //在body添加这个标签
+    $("body").append($i);
+        //animate() 方法执行 CSS 属性集的自定义动画。
+        //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+        //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+        $i.animate({
+        //将原来的位置向上移动180
+            "top" : y - 180,
+                "opacity" : 0
+         //1500动画的速度
+        }, 1500, function() {
+        //时间到了自动删除
+            $i.remove();
+        });
+    });
+})
+    ;
+</script>
+	
+	
+</head>
+<body data-spy="scroll" data-target="#myScrollspy">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://blog.weizixiang.com" style="font:small;">博客</a>
     </div>
-  </body>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/login/"><span class="glyphicon glyphicon-user"></span>登录</a></li>
+      <!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>-->
+    </ul>
+  </div>
+</nav>
+
+    </div>
+	<div class="alert alert-info alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    因为特殊情况<del>（主页有点丑）</del>，主页就先不展示了，先跳到这个博客页。
+  </div>
+	
+
+	
+	<div class="col-xs-12"><!--12-->
+            <h2 id="section-1">如何使用GitHub托管自己的网站？</h2>
+            <p>1、登录GitHub（假设有账号）……</p><a href="article/using-github-to-build-a-website/" style="color:black"> Read More</a><h6 class="text-right" style="color:grey">2021/2/18 10:41</h6>
+            <hr>
+	</div>
+
+</div>
+
+<div class="footer">
+  <center><p><small>Copyright © 2021 Wei Zixiang‘s Blog</small></p></center>
+</div>
+</body>
 </html>
